@@ -1,0 +1,72 @@
+<html>
+    <link href="https://kbromer.github.io/cdn/css/bootstrapsf1.min.css" rel="stylesheet">
+    <style>
+      html {
+        height: 100%;
+      }
+      body {
+        font-family: 'Courier New';
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: #344A5F;
+      }
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto
+      }
+      .form-signin {
+        max-width: 330px;
+        padding: 35px;
+        margin: 0 auto;
+        background: #344A5F;
+        border-radius: 25px;
+        border-style: solid;
+        border-color: #F0F1F2;
+      }
+      .form-signin-heading {
+        font-weight: bold;
+        margin-bottom: 40px;
+        color: #F0F1F2;
+        text-align: center;
+      }
+      .form-signin .checkbox {
+        font-weight: bold;
+      }
+      .form-signin .form-control {
+        position: relative;
+        height: auto;
+        -webkit-box-sizing: border-box;
+           -moz-box-sizing: border-box;
+                box-sizing: border-box;
+        padding: 10px;
+        font-size: 16px;
+      }
+      .form-signin .form-control:focus {
+        z-index: 2;
+      }
+      .form-signin input[type="email"] {
+        margin-bottom: -1px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+      .form-signin input[type="password"] {
+        margin-bottom: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <form class="form-signin" role="form" action="/login" method="post">
+        <h2 class="form-signin-heading">lrb</h2>
+        <img src="http://kbromer.github.io/cdn/images/LurchOrgApp.png"/>
+        <input type="text" class="form-control" placeholder="Username" name="username" required autofocus>
+        <input type="password" class="form-control" placeholder="Password" name="password"required>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+    </div>
+  </body>
+</html>
