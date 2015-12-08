@@ -1,0 +1,73 @@
+body {
+    background: linear-gradient(to right, #344A5F, #FFFFFF, #344A5F);
+}
+.navbar{
+  z-index: 999;
+  width: 100%;
+  position: relative;
+  background-color: #344A5F;
+}
+.container-fluid{
+  margin-left: 10%;
+}
+.nav{
+  margin-left: 45px;
+}
+.navbar-right{
+  margin-right: 60px;
+}
+.panel{
+  margin-right: auto;
+  margin-left: auto;
+  width: 50%;
+}
+.panel-heading{
+  background-color: #344A5F;
+}
+.panel-default>.panel-heading{
+  background-color: #344A5F;
+}
+.panel.panel-default>.panel-heading{
+  color: #FFFFFF;
+}
+.panel-row{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.auth-status{
+  float: right;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size:30px;
+  padding: 10% 0;
+  display: none;
+}
+.oauth-status-remove{
+  color: red;
+  display: none;
+}
+.oauth-status-ok{
+  color: green;
+  display: none;
+}
+.button-group{
+  padding: 2% 0;
+}
+.btn{
+  margin-left: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: none;
+}
+
+
+#content_row{
+  margin-top: auto;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+img{
+  width:75px;
+}
