@@ -12,7 +12,6 @@
 
   // ========== Express Config ==========
   var port = Number(process.env.PORT || 5000);
-  var logfmt = require("logfmt");
   var express = require("express");
   var app = express();
   var cookieParser = require('cookie-parser');
@@ -158,6 +157,14 @@
     }
     res.write(status_response);
     res.end();
+  });
+  app.get('/auth/sfdc/revoke', function(req, res){
+    var r = res;
+    console.log('SFDC revoke requested');
+    org.revokeToken({token: lurch.auth.sfdc_token}, function(err, resp) {
+      lurch.auth.sfdc_token = '';
+      res.redirect('/index.html');
+    });
   });
 
   // ========== Lurch Authentication ==========
