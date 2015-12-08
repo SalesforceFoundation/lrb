@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <script type="text/javascript" src="https://kbromer.github.io/cdn/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="lurch.js"></script>
+		<script type="text/javascript" src="socket.io.js"></script>
+		<link href="https://kbromer.github.io/cdn/css/bootstrapsf1.min.css" rel="stylesheet">
+    <link href="css/bootstrap-glyphicons.css" rel="stylesheet">
+    <link href="css/lurch.css" rel="stylesheet">
+	</head>
+	<body>
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand">Lurch</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-default">
+          <ul class="nav navbar-nav">
+            <li class="active"><a id="console_nav_option" href="#">Console</a></li>
+            <li><a href="#" id="log_nav_option">Logs</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#" id="logout_lurch">Logout</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+		<div class="row" id="content_row">
+      <div class="panel panel-default">
+        <div class="panel-heading">Authorization Status</div>
+        <ul class="list-group">
+          <li class="list-group-item">
+            <div class="row panel-row">
+              <div class="col-xs-6 col-md-4">
+                <img src="http://kbromer.github.io/cdn/images/Octocat.png"/>
+                Github Authorization
+              </div>
+              <div class="col-xs-6 col-md-4 button-group">
+                <button type="button" class="btn btn-success btn-xs github-connect">Connect</button>
+                <button type="button" class="btn btn-danger btn-xs github-disconnect">Disconnect</button>
+              </div>
+              <div class="col-xs-6 col-md-4">
+                <span class="glyphicon glyphicon-remove-sign auth-status oauth-status-remove gh-auth-remove"></span>
+								<span class="glyphicon glyphicon-ok-sign auth-status oauth-status-ok gh-auth-ok"></span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+		</div>
+
+		<div class="row" id="content_row">
+      <div class="panel panel-default">
+        <div class="panel-heading">System Log</div>
+				<div class="panel-body">
+					<ul class="list-group" id="loglist">
+					</ul>
+  			</div>
+      </div>
+		</div>
+
+		<!-- Confirmation Modal -->
+		<div class="modal fade" id="menu_modal" tabindex="-1" role="dialog" aria-labelledby="Confirmation" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close modal-close" data-dismiss="modal"><span aria-hidden="true" class="modal-close">&times;</span><span class="sr-only">Close</span></button>
+		        <h4 class="modal-title" id="myModalLabel">Confirmation</h4>
+		      </div>
+		      <div class="modal-body"></div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+		        <button id="disconnectBTN" type="button" class="btn btn-primary">Disconnect</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+	</body>
+</html>
