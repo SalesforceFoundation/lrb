@@ -237,7 +237,7 @@
             //determine what other sections should be added
             var ghcomment = {
               user: event_body.sender.login,
-              repo: event_body.repository.name,
+              repo: event_body.repository.full_name,
               number: issue_number,
               body: "\n#### General\n- [ ] All new pages, classes or metadata conform to naming conventions\n"
             };
