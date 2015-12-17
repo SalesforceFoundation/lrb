@@ -232,11 +232,11 @@
           var command = command_string.substring(command_string.indexOf('**lurch:'), command_string.length);
           lurchcommand = command.replace('**lurch:', '').trim();
           console.log('LURCH COMMAND: ' + lurchcommand);
-          if (lurchcommand.toLowerCase().indexOf('review') > -1){            
+          if (lurchcommand.toLowerCase().indexOf('review') > -1){
 
             var ghcomment = {
-              user: 'LurchTheButler',
-              repo: event_body.repository.full_name,
+              user: 'SalesforceFoundation',
+              repo: event_body.repository.name,
               number: issue_number,
               body: "\n#### General\n- [ ] All new pages, classes or metadata conform to naming conventions\n"
             };
