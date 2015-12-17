@@ -235,6 +235,9 @@
           if (lurchcommand.toLowerCase().indexOf('review') > -1){
 
             //determine what other sections should be added
+            console.log('USER: ' + event_body.sender.login);
+            console.log('REPO: ' + event_body.repository.full_name);
+            
             var ghcomment = {
               user: event_body.sender.login,
               repo: event_body.repository.full_name,
